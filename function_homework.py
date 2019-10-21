@@ -49,12 +49,46 @@ def panogram(x):
 print(panogram(string))
 
 
-def atlas():
-	slovnyk = {}
-	slovnyk['name'] = input('enter country:  ')
-	slovnyk['capital'] = input('enter capital of the country:  ')
-	print(slovnyk)
+def operation(*args):
+	x = input('enter operation:  ')
+	z = []
+	while True:
+		y = input('enter digit or prees "q" to exit:  ')
+		if y == 'q':
+			break
+		else:
+			z.append(int(y))
+	if x == '+':
+		rez = 0
+		for i in z:
+			rez = rez + i
+	if x == '-':
+		rez = z[0]
+		for i in range(1, len(z)):
+			rez = rez - z[i]
+	if x == '*':
+		rez = 1
+		for i in z:
+			rez = rez * i
+	if x == '/':
+		rez = z[0]
+		for i in range(1, len(z)):
+			if z[i] == 0:
+				rez = 'division by zero'
+				break
+			else:
+				rez = rez / z[i]
+	return print(rez)
 
-atlas()
+operation()
+
+
+#def atlas():
+#	slovnyk = {}
+#	slovnyk['name'] = input('enter country:  ')
+#	slovnyk['capital'] = input('enter capital of the country:  ')
+#	print(slovnyk)
+
+#atlas()
 
 
