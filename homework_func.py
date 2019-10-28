@@ -1,4 +1,5 @@
 from random import randint
+import random
 
 
 slovnyk = [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"}, {"VIII":"S007"}]
@@ -56,6 +57,17 @@ def counter(a, b):
 
 
 counter(1233211, 12128)
+
+
+a = [1, 2, 3, 4, 5]
+
+def peremish(data):
+	random.shuffle(data)
+	print(data)
+
+peremish(a)
+
+
 
 a = [1, 2, 3, 4, 5]
 b = [5, 6, 7, 8, 9]
