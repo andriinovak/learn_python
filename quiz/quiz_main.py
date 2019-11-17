@@ -1,18 +1,24 @@
 from questions_quiz import Questions
-from answers_quiz import input_user_answer, verify, print_user_answer
+from answers_quiz import UserAnswer
 
-question_list = Questions('questions.json')
+question_list = Questions("questions.json")
+
 
 def run_quiz():
-	one_random_question = question_list.get_random_question()	
-	one_random_question.display()
-	answer = input_user_answer()
-	print(answer)
-	is_correct = verify(one_random_question, answer)
-	print(is_correct)
-	print_user_answer(one_random_question, answer, is_correct)
+    quit_code = ''
+    while quit_code != 'q':
+        one_random_question = question_list.get_random_question()
+        one_random_question.display()
+        while True:
+            answer = UserAnswer(one_random_question)
+            if answer.verify(one_random_question):
+                break
+            else:
+                print("You are wrong, try again")
+
+        answer.user_answer_display(one_random_question)
+        quit_code = input("Press 'q' to quit or press any key to continue:  ")
 
 
-if __name__ == '__main__':
-	run_quiz()
-
+if __name__ == "__main__":
+    run_quiz()
