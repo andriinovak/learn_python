@@ -1,0 +1,3 @@
+2019-12-17 20:45:01,022: root - DEBUG - This will get logged
+2019-12-17 20:45:01,025: Converter - ERROR - Error getting url: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2019-12-17 20:45:01,025: Converter - INFO - getting value from piramida

@@ -1,0 +1,10 @@
+2019-12-17 21:01:35,847: root - DEBUG - This will get logged
+2019-12-17 21:01:35,850: Converter - ERROR - Error getting url: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2019-12-17 21:02:23,646: root - DEBUG - This will get logged
+2019-12-17 21:02:23,649: Converter - ERROR - Error getting url: Invalid URL '': No schema supplied. Perhaps you meant http://?
+2019-12-17 21:03:26,727: root - DEBUG - This will get logged
+2019-12-17 21:03:26,727: Converter - ERROR - you get error hello zero divizion
+Traceback (most recent call last):
+  File "c:/python_files/python_1/bohdan_bot.py", line 20, in __get_kurs
+    raise ZeroDivisionError("hello zero divizion")
+ZeroDivisionError: hello zero divizion
