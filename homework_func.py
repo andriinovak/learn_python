@@ -78,8 +78,8 @@ def list_1_list_2(list1, list2):
 			break
 		else:
 			x = False
-	return(x)
-
+	return x
+	
 
 print(list_1_list_2(a, b))
 

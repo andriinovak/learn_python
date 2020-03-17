@@ -20,7 +20,7 @@ def render_question(rand_numb):
 def input_answer(random_number):
 	while True:
 		user_answer = input('enter number of answer:  ')
-		if user_answer.isdigit() == True and questions[random_number]['choices'][int(user_answer) - 1]['is_correct'] == True:
+		if user_answer.isdigit() and questions[random_number]['choices'][int(user_answer) - 1]['is_correct']:
 			print('you are right, next question')
 			break
 		else:
@@ -31,7 +31,10 @@ user_input = ''
 while user_input != 'q':
 	random_number = get_random_number()
 	render_question(random_number)
-	input_answer(random_number)
-	user_input = input('Press "c" to continue, or press "q" to quit:  ')
+	try:
+		input_answer(random_number)
+	except IndexError:
+		print('you are wrong, try again ""list index out of range""')
+	user_input = input('Press any key to continue, or press "q" to quit:  ')
 
 
